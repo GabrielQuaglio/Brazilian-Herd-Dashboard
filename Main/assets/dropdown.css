@@ -1,0 +1,20 @@
+.my-dropdown {
+    width: 200px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.my-dropdown:hover, .my-dropdown:focus {
+    border-color: #666;
+}
+
+.my-dropdown option {
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+    padding: 10px;
+}

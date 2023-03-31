@@ -13,7 +13,7 @@ app = Dash(__name__,assets_folder="Aplicacao/Main/assets/")
 
 # assume you have a "long-form" data frameMy Project 83723
 # see https://plotly.com/python/px-arguments/ for more options
-df_info = pd.read_csv('./Dados_dash/Informações_reabnhos_municipios.csv')
+df_info = pd.read_csv(fr"C:\Users\quagl\OneDrive\Documentos\Python_dash\Informações_reabnhos_municipios.csv")
 
 
 
