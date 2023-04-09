@@ -45,9 +45,11 @@ app.layout = html.Div(children=[
                 html.Button('Clique aqui', id='botao', className='my-button')
 
             ])
+
             
         ],className='d-flex justify-content-between')
-    ], className='my-custom-div')
+    ], className='my-custom-div'),
+    html.Div(id='nova-div', className='my-custom-div')
 ], className='app-header')
 
 
@@ -59,6 +61,27 @@ def atualizar_opcoes_cidade(uf_selecionada):
     uf_selecionado = uf_selecionada
     opcoes_cidade = [{'label': cidade, 'value': cidade} for cidade in df_info[df_info['SIGLA'] == uf_selecionada]['NM_MUN'].unique()]
     return opcoes_cidade
+
+@app.callback(
+    Output('nova-div', 'children'),
+    Input('botao', 'n_clicks')
+)
+def atualizar_nova_div(n_clicks):
+    if n_clicks:
+        div_interna1 = html.Div('Conteúdo da div interna 1')
+        div_interna2 = html.Div('Conteúdo da div interna 2')
+        div_interna3 = html.Div('Conteúdo da div interna 3')
+        return [div_interna1, div_interna2, div_interna3]
+    else:
+        return []
+
+
+
+
+
+
+
+
 
 
 
